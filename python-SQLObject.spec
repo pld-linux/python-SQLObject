@@ -9,7 +9,7 @@ Release:	1
 License:	LGPL
 Vendor:		Ian Bicking <ianb@colorstudy.com>
 Group:		Development/Languages/Python
-Source0:	http://prdownloads.sourceforge.net/sqlobject/%{module}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/sqlobject/%{module}-%{version}.tar.gz
 # Source0-md5:	30867c7ca545653831b5de7d87632f19
 URL:		http://sqlobject.org
 BuildRequires:	python-devel >= 1:2.3
