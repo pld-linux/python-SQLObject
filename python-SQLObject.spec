@@ -14,7 +14,6 @@ Source0:	http://dl.sourceforge.net/sqlobject/%{module}-%{version}.tar.gz
 # Source0-md5:	0dbb6ea429aa40eee734751ad48fbfbb
 URL:		http://sqlobject.org
 BuildRequires:	python-devel >= 1:2.3
-BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
