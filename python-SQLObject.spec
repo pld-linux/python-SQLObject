@@ -10,7 +10,7 @@ Release:	1
 License:	LGPL
 Vendor:		Ian Bicking <ianb@colorstudy.com>
 Group:		Development/Languages/Python
-Source0:	http://cheeseshop.python.org/packages/source/S/%{module}/%{module}-%{version}.tar.gz
+Source0:	http://cheeseshop.python.org/packages/source/S/SQLObject/%{module}-%{version}.tar.gz
 # Source0-md5:	dccb921b5df6a15312b56630ac4ac205
 Patch0:		%{name}-disable-setuptools.patch
 URL:		http://sqlobject.org
