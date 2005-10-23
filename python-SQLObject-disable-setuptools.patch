@@ -1,0 +1,33 @@
+diff -Naur SQLObject-0.7.0.orig/scripts/sqlobject-admin SQLObject-0.7.0/scripts/sqlobject-admin
+--- SQLObject-0.7.0.orig/scripts/sqlobject-admin	2005-10-02 00:59:35.000000000 +0200
++++ SQLObject-0.7.0/scripts/sqlobject-admin	2005-10-23 23:02:38.000000000 +0200
+@@ -3,13 +3,6 @@
+ import os
+ 
+ try:
+-    import pkg_resources
+-    pkg_resources.require('SQLObject>0.6.1')
+-except (ImportError, pkg_resources.DistributionNotFound):
+-    # Oh well, we tried...
+-    pass
+-
+-try:
+     import sqlobject.manager
+ except ImportError:
+     try:
+diff -Naur SQLObject-0.7.0.orig/setup.py SQLObject-0.7.0/setup.py
+--- SQLObject-0.7.0.orig/setup.py	2005-10-02 00:59:54.000000000 +0200
++++ SQLObject-0.7.0/setup.py	2005-10-23 23:03:40.000000000 +0200
+@@ -1,11 +1,4 @@
+-# ez_setup doesn't work with Python 2.2, so we use distutils
+-# in that case:
+-try:
+-    from ez_setup import use_setuptools
+-    use_setuptools()
+-    from setuptools import setup
+-except ImportError:
+-    from distutils.core import setup
++from distutils.core import setup
+ 
+ subpackages = ['firebird', 'inheritance', 'mysql', 'postgres',
+                'sqlite', 'sybase', 'maxdb', 'util', 'manager']

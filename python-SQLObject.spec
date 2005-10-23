@@ -5,16 +5,18 @@
 Summary:	Object-Relational Manager, aka database wrapper
 Summary(pl):	Zarz±dca obiektowo-relacyjny, czyli wrapper dla baz danych
 Name:		python-%{module}
-Version:	0.6.1
+Version:	0.7.0
 Release:	1
 License:	LGPL
 Vendor:		Ian Bicking <ianb@colorstudy.com>
 Group:		Development/Languages/Python
-Source0:	http://dl.sourceforge.net/sqlobject/%{module}-%{version}.tar.gz
-# Source0-md5:	0dbb6ea429aa40eee734751ad48fbfbb
+Source0:	http://cheeseshop.python.org/packages/source/S/%{module}/%{module}-%{version}.tar.gz
+# Source0-md5:	dccb921b5df6a15312b56630ac4ac205
+Patch0:		%{name}-disable-setuptools.patch
 URL:		http://sqlobject.org
 BuildRequires:	python-devel >= 1:2.3
 %pyrequires_eq	python-modules
+Requires:	python-FormEncode >= 0.2.2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,8 +34,10 @@ PostgreSQL-em, SQLite, Firebirdem.
 
 %prep
 %setup -q -n %{module}-%{version}
+%patch0 -p1
 
 %build
+rm -rf ez_setup
 python setup.py build
 
 %install
@@ -50,5 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.txt PKG-INFO docs examples
+%doc README.txt PKG-INFO docs 
+%attr(755,root,root) %{_bindir}/*
 %{py_sitescriptdir}/%{_module}
