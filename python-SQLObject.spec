@@ -12,9 +12,9 @@ Vendor:		Ian Bicking <ianb@colorstudy.com>
 Group:		Development/Languages/Python
 Source0:	http://cheeseshop.python.org/packages/source/S/SQLObject/%{module}-%{version}.tar.gz
 # Source0-md5:	dccb921b5df6a15312b56630ac4ac205
-Patch0:		%{name}-disable-setuptools.patch
 URL:		http://sqlobject.org
 BuildRequires:	python-devel >= 1:2.3
+BuildRequires:	python-setuptools
 %pyrequires_eq	python-modules
 Requires:	python-FormEncode >= 0.2.2
 BuildArch:	noarch
@@ -34,16 +34,15 @@ PostgreSQL-em, SQLite, Firebirdem.
 
 %prep
 %setup -q -n %{module}-%{version}
-%patch0 -p1
 
 %build
-rm -rf ez_setup
 python setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 python -- setup.py install \
+	--single-version-externally-managed \
 	--root=$RPM_BUILD_ROOT \
 	--optimize=2
 
@@ -57,3 +56,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.txt PKG-INFO docs 
 %attr(755,root,root) %{_bindir}/*
 %{py_sitescriptdir}/%{_module}
+%{py_sitescriptdir}/SQLObject*
