@@ -5,13 +5,15 @@
 Summary:	Object-Relational Manager, aka database wrapper
 Summary(pl):	Zarz±dca obiektowo-relacyjny, czyli wrapper dla baz danych
 Name:		python-%{module}
-Version:	0.7.0
-Release:	2
+Version:	0.7.1
+%define		rev 1643
+Release:	0.%{rev}.1
 License:	LGPL
 Vendor:		Ian Bicking <ianb@colorstudy.com>
 Group:		Development/Languages/Python
-Source0:	http://cheeseshop.python.org/packages/source/S/SQLObject/%{module}-%{version}.tar.gz
-# Source0-md5:	dccb921b5df6a15312b56630ac4ac205
+#Source0:	http://cheeseshop.python.org/packages/source/S/SQLObject/%{module}-%{version}.tar.gz
+Source0:	%{module}-%{version}dev-r%{rev}.tar.gz
+# Source0-md5:	e9bec6b8dc9d063be2430f25a7b0bbf6
 URL:		http://sqlobject.org
 BuildRequires:	python-devel >= 1:2.3
 BuildRequires:	python-setuptools
@@ -33,7 +35,7 @@ bazy danych/SQL. Nacisk po³o¿ony jest na wygodê. Dzia³a z MySQL-em,
 PostgreSQL-em, SQLite, Firebirdem.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{module}-%{version}dev-r%{rev}
 
 %build
 python setup.py build
