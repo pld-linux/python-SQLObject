@@ -7,7 +7,7 @@ Summary(pl):	Zarz±dca obiektowo-relacyjny, czyli wrapper dla baz danych
 Name:		python-%{module}
 Version:	0.7.1
 %define		rev 1643
-Release:	0.%{rev}.1
+Release:	0.%{rev}.2
 License:	LGPL
 Vendor:		Ian Bicking <ianb@colorstudy.com>
 Group:		Development/Languages/Python
