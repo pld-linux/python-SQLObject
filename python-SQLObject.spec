@@ -3,17 +3,15 @@
 %define _module sqlobject
 
 Summary:	Object-Relational Manager, aka database wrapper
-Summary(pl):	Zarz±dca obiektowo-relacyjny, czyli wrapper dla baz danych
+Summary(pl.UTF-8):   ZarzÄ…dca obiektowo-relacyjny, czyli wrapper dla baz danych
 Name:		python-%{module}
 Version:	0.7.1
-%define		rev 1643
-Release:	0.%{rev}.2
+Release:	1
 License:	LGPL
 Vendor:		Ian Bicking <ianb@colorstudy.com>
 Group:		Development/Languages/Python
-#Source0:	http://cheeseshop.python.org/packages/source/S/SQLObject/%{module}-%{version}.tar.gz
-Source0:	%{module}-%{version}dev-r%{rev}.tar.gz
-# Source0-md5:	e9bec6b8dc9d063be2430f25a7b0bbf6
+Source0:	http://cheeseshop.python.org/packages/source/S/SQLObject/%{module}-%{version}.tar.gz
+# Source0-md5:	8f1324d21753d9080fa098ff1f2761cf
 URL:		http://sqlobject.org
 BuildRequires:	python-devel >= 1:2.3
 BuildRequires:	python-setuptools
@@ -28,14 +26,14 @@ friendly-looking Python object instead of a database/SQL interface.
 Emphasizes convenience. Works with MySQL, PostgreSQL, SQLite,
 Firebird.
 
-%description -l pl
-Klasy tworzone przy u¿yciu SQLObject opakowuj± wiersze bazy danych,
-prezentuj±c przyja¼nie wygl±daj±cy obiekt Pythona zamiast interfejsu
-bazy danych/SQL. Nacisk po³o¿ony jest na wygodê. Dzia³a z MySQL-em,
+%description -l pl.UTF-8
+Klasy tworzone przy uÅ¼yciu SQLObject opakowujÄ… wiersze bazy danych,
+prezentujÄ…c przyjaÅºnie wyglÄ…dajÄ…cy obiekt Pythona zamiast interfejsu
+bazy danych/SQL. Nacisk poÅ‚oÅ¼ony jest na wygodÄ™. DziaÅ‚a z MySQL-em,
 PostgreSQL-em, SQLite, Firebirdem.
 
 %prep
-%setup -q -n %{module}-%{version}dev-r%{rev}
+%setup -q -n %{module}-%{version}
 
 %build
 python setup.py build
