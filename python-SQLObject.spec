@@ -3,7 +3,7 @@
 %define _module sqlobject
 
 Summary:	Object-Relational Manager, aka database wrapper
-Summary(pl.UTF-8):   Zarządca obiektowo-relacyjny, czyli wrapper dla baz danych
+Summary(pl.UTF-8):	Zarządca obiektowo-relacyjny, czyli wrapper dla baz danych
 Name:		python-%{module}
 Version:	0.7.1
 Release:	1
