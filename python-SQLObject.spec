@@ -6,7 +6,7 @@ Summary:	Object-Relational Manager, aka database wrapper
 Summary(pl.UTF-8):	Zarządca obiektowo-relacyjny, czyli wrapper dla baz danych
 Name:		python-%{module}
 Version:	0.10.4
-Release:	1
+Release:	2
 License:	LGPL
 Vendor:		Ian Bicking <ianb@colorstudy.com>
 Group:		Development/Languages/Python
