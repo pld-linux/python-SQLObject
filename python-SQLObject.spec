@@ -14,7 +14,9 @@ Source0:	http://cheeseshop.python.org/packages/source/S/SQLObject/%{module}-%{ve
 # Source0-md5:	20039279c5b799c49e6496b9fe71f03f
 URL:		http://sqlobject.org
 BuildRequires:	python-devel >= 1:2.3
+BuildRequires:	python-modules
 BuildRequires:	python-setuptools
+BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 Requires:	python-FormEncode >= 0.2.2
 BuildArch:	noarch
