@@ -38,7 +38,7 @@ PostgreSQL-em, SQLite, Firebirdem.
 %setup -q -n %{module}-%{version}
 
 %build
-python setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
