@@ -13,6 +13,7 @@ Group:		Development/Languages/Python
 Source0:	http://cheeseshop.python.org/packages/source/S/SQLObject/%{module}-%{version}.tar.gz
 # Source0-md5:	20039279c5b799c49e6496b9fe71f03f
 URL:		http://sqlobject.org
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	python-devel >= 1:2.3
 BuildRequires:	python-modules
 BuildRequires:	python-setuptools
