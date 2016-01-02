@@ -6,7 +6,7 @@ Summary:	Object-Relational Manager, aka database wrapper
 Summary(pl.UTF-8):	Zarządca obiektowo-relacyjny, czyli wrapper dla baz danych
 Name:		python-%{module}
 Version:	0.10.4
-Release:	3
+Release:	4
 License:	LGPL
 Vendor:		Ian Bicking <ianb@colorstudy.com>
 Group:		Development/Languages/Python
@@ -44,12 +44,10 @@ PostgreSQL-em, SQLite, Firebirdem.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python -- setup.py install \
-	--single-version-externally-managed \
-	--root=$RPM_BUILD_ROOT \
-	--optimize=2
+%py_install \
+	--single-version-externally-managed
 
-find $RPM_BUILD_ROOT%{py_sitescriptdir} -name \*.py | xargs rm -f
+%py_postclean
 
 %clean
 rm -rf $RPM_BUILD_ROOT
